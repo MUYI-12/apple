@@ -1,22 +1,21 @@
 package com.apple.book;
 
 public class Dictionary extends Book {
-    private int dicpages;
+    private int dictates;
 
-    public int getDicpages() {
-        return dicpages;
+    public int getDictates() {
+        return dictates;
     }
 
-    public void setDicpages(int dicpages) {
-        this.dicpages = dicpages;
+    public void setDictates(int dictates) {
+        this.dictates = dictates;
     }
 
-    public Dictionary(String BookIP, String BookName, int pages,int dicpages){
+    public Dictionary(String BookIP, String BookName, int pages,int dictates){
         super(BookIP,BookName,pages);
-        this.dicpages = dicpages;
+        this.dictates = dictates;
     }
     public String toString(){
-        return super.toString() + "," + this.dicpages;
+        return super.toString() + "," + this.dictates;
     }
-
 }
