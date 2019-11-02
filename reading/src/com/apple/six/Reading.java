@@ -1,22 +1,31 @@
 package com.apple.six;
 
 public class Reading {
-    private int Bookpages;
-    private double Bookprice;
+    private String BookPages;
+    private String BookPrice;
 
-    public int getBookpages() {
-        return Bookpages;
+    public String getBookPages() {
+        return BookPages;
     }
 
-    public void setBookpages(int bookpages) {
-        Bookpages = bookpages;
+    public void setBookPages(String bookPages) {
+        BookPages = bookPages;
     }
 
-    public double getBookprice() {
-        return Bookprice;
+    public String getBookPrice() {
+        return BookPrice;
     }
 
-    public void setBookprice(double bookprice) {
-        Bookprice = bookprice;
+    public void setBookPrice(String bookPrice) {
+        BookPrice = bookPrice;
+    }
+
+    Reading(String BookPages, String BookPrice){
+        this.BookPages = BookPages;
+        this.BookPrice = BookPrice;
+    }
+
+    public String toString(){
+        return this.BookPages + "," + this.BookPrice;
     }
 }

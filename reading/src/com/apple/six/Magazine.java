@@ -10,4 +10,13 @@ public class Magazine extends Reading {
     public void setMagazineData(String magazineData) {
         MagazineData = magazineData;
     }
+
+    Magazine(String BookPages, String BookPrice, String MagazineData){
+        super(BookPages,BookPrice);
+        this.MagazineData = MagazineData;
+    }
+    public String toString(){
+        return super.toString() + "," + this.MagazineData;
+    }
+
 }
