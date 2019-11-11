@@ -2,8 +2,10 @@ package GUI2;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class LoginForm extends JFrame {
+class LoginForm extends JFrame {
 
     private JPanel panelLogin;
     private JLabel userLabel;
@@ -12,55 +14,10 @@ public class LoginForm extends JFrame {
     private JPasswordField passwordText;
     private JButton loginButton;
 
-    public JPanel getPanelLogin() {
-        return panelLogin;
-    }
 
-    public void setPanelLogin(JPanel panelLogin) {
-        this.panelLogin = panelLogin;
-    }
+    LoginForm(){
+        final String COMMAND_LOGIN = "LOGIN";
 
-    public JLabel getUserLabel() {
-        return userLabel;
-    }
-
-    public void setUserLabel(JLabel userLabel) {
-        this.userLabel = userLabel;
-    }
-
-    public JTextField getUserText() {
-        return userText;
-    }
-
-    public void setUserText(JTextField userText) {
-        this.userText = userText;
-    }
-
-    public JLabel getPasswordLabel() {
-        return passwordLabel;
-    }
-
-    public void setPasswordLabel(JLabel passwordLabel) {
-        this.passwordLabel = passwordLabel;
-    }
-
-    public JPasswordField getPasswordText() {
-        return passwordText;
-    }
-
-    public void setPasswordText(JPasswordField passwordText) {
-        this.passwordText = passwordText;
-    }
-
-    public JButton getLoginButton() {
-        return loginButton;
-    }
-
-    public void setLoginButton(JButton loginButton) {
-        this.loginButton = loginButton;
-    }
-
-    public LoginForm(){
         setTitle("Login Form");
         setSize(350, 180);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -86,12 +43,28 @@ public class LoginForm extends JFrame {
 
         loginButton = new JButton("login");
         loginButton.setBounds(10, 80, 80, 25);
+        loginButton.setActionCommand(COMMAND_LOGIN);
         panelLogin.add(loginButton);
 
         add(panelLogin);
+
+        ActionListener actionListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                String command = actionEvent.getActionCommand();
+
+                if (COMMAND_LOGIN.equals(command)){
+                    System.out.println("ok按钮被点击");
+                    JOptionPane.showConfirmDialog(null,"标题【出错】","请输入数字", JOptionPane.ERROR_MESSAGE);
+                }else{
+                    System.out.println("Cannel按钮被返回");
+                }
+            }
+        };
+        loginButton.addActionListener(actionListener);
     }
 
-    public void setFrameLoginVisible(Boolean visible){
+    void setFrameLoginVisible(Boolean visible){
         setVisible(visible);
     }
 

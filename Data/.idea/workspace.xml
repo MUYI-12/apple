@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b93cd75-d4e1-4053-b23f-db475bf8c357" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI2/LoginForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI2/Magagergui2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../workbook/src/com/classbook/chapter/six2/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../workbook/src/com/classbook/chapter/six2/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../workbook/src/com/classbook/chapter/six2/ShapeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../workbook/src/com/classbook/chapter/six2/Squary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JieMian/GUI/LoginForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JieMian/GUI/LoginForm$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JieMian/GUI/LoginForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JieMian/GUI/LoginForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/LoginForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JieMian/GUI2/LoginForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JieMian/GUI2/LoginForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI2/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI2/LoginForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ForArray.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Guessage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../HelloWorld.java" beforeDir="false" />
@@ -28,6 +22,10 @@
       <change beforePath="$PROJECT_DIR$/../can1.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../reading/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../reading/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../reading/src/com/apple/six/ReadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reading/src/com/apple/six/ReadServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workbook/src/com/classbook/chapter/six2/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../workbook/src/com/classbook/chapter/six2/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workbook/src/com/classbook/chapter/six2/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/../workbook/src/com/classbook/chapter/six2/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workbook/src/com/classbook/chapter/six2/ShapeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../workbook/src/com/classbook/chapter/six2/ShapeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workbook/src/com/classbook/chapter/six2/Squary.java" beforeDir="false" afterPath="$PROJECT_DIR$/../workbook/src/com/classbook/chapter/six2/Squary.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +155,7 @@
       <updated>1573023775661</updated>
       <workItem from="1573023787985" duration="2223000" />
       <workItem from="1573038211414" duration="2190000" />
-      <workItem from="1573480376493" duration="3307000" />
+      <workItem from="1573480376493" duration="4619000" />
     </task>
     <servers />
   </component>
