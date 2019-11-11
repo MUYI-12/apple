@@ -2,6 +2,9 @@ package GUI;
 
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class LoginForm {
     public static void main(String[] args){
@@ -20,6 +23,8 @@ public class LoginForm {
     }
 
     public static  void PlaceCompoments(JPanel panel){
+
+        final String COMMAND_LOGIN = "LOGIN";
         panel.setLayout(null);
 
         JLabel userLabel = new JLabel("Username:");
@@ -38,8 +43,36 @@ public class LoginForm {
         passwordText.setBounds(100,50,165,25);
         panel.add(passwordText);
 
+        JLabel identifyLabel = new JLabel("验证码：");
+        identifyLabel.setBounds(10,80,80,25);
+        panel.add(identifyLabel);
+
+        JPasswordField identifyText = new JPasswordField(10);
+        identifyText.setBounds(100,80,165,25);
+        panel.add(identifyText);
+
         JButton loginButton = new JButton("Login");
-        loginButton.setBounds(10,80,80,25);
+        loginButton.setBounds(10,130,80,25);
+        loginButton.setActionCommand(COMMAND_LOGIN);
         panel.add(loginButton);
+
+        ActionListener actionListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                String command = actionEvent.getActionCommand();
+
+                if (COMMAND_LOGIN.equals(command)){
+                    System.out.println("ok按钮被点击");
+                    JOptionPane.showConfirmDialog(null,"标题【出错】","请输入数字", JOptionPane.ERROR_MESSAGE);
+                }else{
+                    System.out.println("Cannel按钮被返回");
+                }
+            }
+        };
+        loginButton.addActionListener(actionListener);
+
+        JButton registerButton = new JButton("Register");
+        registerButton.setBounds(100,130,90,25);
+        panel.add(registerButton);
     }
 }
