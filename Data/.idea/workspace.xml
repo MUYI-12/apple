@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b93cd75-d4e1-4053-b23f-db475bf8c357" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JieMian/GUI/LoginForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JieMian/GUI/LoginForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JieMian/GUI/LoginForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JieMian/GUI/LoginForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JieMian/GUI2/LoginForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JieMian/GUI2/LoginForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI2/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI2/LoginForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ForArray.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Guessage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../HelloWorld.java" beforeDir="false" />
@@ -155,7 +150,7 @@
       <updated>1573023775661</updated>
       <workItem from="1573023787985" duration="2223000" />
       <workItem from="1573038211414" duration="2190000" />
-      <workItem from="1573480376493" duration="4619000" />
+      <workItem from="1573480376493" duration="4895000" />
     </task>
     <servers />
   </component>
