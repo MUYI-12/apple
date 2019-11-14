@@ -14,7 +14,7 @@ public class Guessage{
 			System.out.println("´ó½ã½ã");//18~35
 			break;
 			default :
-			System.out.println("´óÂè");//36~
+			System.out.println("°¢ÒÌ");//36~
 		}
 	}
 	
