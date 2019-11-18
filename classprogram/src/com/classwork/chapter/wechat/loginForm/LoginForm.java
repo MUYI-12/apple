@@ -1,78 +1,83 @@
 package com.classwork.chapter.wechat.loginForm;
 
+/**
+ * @program:
+ * @Author:Mr.Y
+ * @Description:
+ * @Data:2019/11/17
+ */
+
+import com.classwork.chapter.wechat.register.Register;
+import com.classwork.chapter.wechat.wechatForm.WechatForm;
+
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class LoginForm {
-    public static void main(String[] args){
+public class LoginForm extends JFrame {
 
-        JFrame frame = new JFrame("Login Example")  ;
+    private JPanel LoginJPanel;
+    private JLabel loginJLabel;
+    private JTextField loginText;
+    private JLabel passwordJLabel;
+    private JTextField passwordJText;
+    private JButton loginJButton;
+    private JButton registerJButton;
 
-        frame.setSize(350,200);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    public LoginForm(){
+        setTitle("Login Form");
+        setSize(300,190);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JPanel panel = new JPanel();
-        frame.add(panel);
+        LoginJPanel = new JPanel();
+        LoginJPanel.setLayout(null);
 
-        PlaceCompoments(panel);
-        frame.setVisible(true);
+        loginJLabel = new JLabel("Login:");
+        loginJLabel.setBounds(10,10,80,25);
+        LoginJPanel.add(loginJLabel);
 
-    }
+        loginText = new JTextField(10);
+        loginText.setBounds(100,10,165,25);
+        LoginJPanel.add(loginText);
 
-    public static  void PlaceCompoments(JPanel panel){
+        passwordJLabel = new JLabel("PassWord:");
+        passwordJLabel.setBounds(10,50,80,25);
+        LoginJPanel.add(passwordJLabel);
 
-        final String COMMAND_LOGIN = "LOGIN";
-        panel.setLayout(null);
+        passwordJText = new JTextField(10);
+        passwordJText.setBounds(100,50,165,25);
+        LoginJPanel.add(passwordJText);
 
-        JLabel userLabel = new JLabel("Username:");
-        userLabel.setBounds(10,20,80,25);
-        panel.add(userLabel);
+        loginJButton = new JButton("Login");
+        loginJButton.setBounds(10,90,80,25);
+        LoginJPanel.add(loginJButton);
 
-        JTextField userText = new JTextField(20);
-        userText.setBounds(100,20,165,25);
-        panel.add(userText);
+        registerJButton = new JButton("Register");
+        registerJButton.setBounds(100,90,80,25);
+        LoginJPanel.add(registerJButton);
 
-        JLabel passwordLabel = new JLabel("Password:");
-        passwordLabel.setBounds(10,50,80,25);
-        panel.add(passwordLabel);
+        add(LoginJPanel);
 
-        JPasswordField passwordText = new JPasswordField(20);
-        passwordText.setBounds(100,50,165,25);
-        panel.add(passwordText);
-
-        JLabel identifyLabel = new JLabel("验证码：");
-        identifyLabel.setBounds(10,80,80,25);
-        panel.add(identifyLabel);
-
-        JPasswordField identifyText = new JPasswordField(10);
-        identifyText.setBounds(100,80,165,25);
-        panel.add(identifyText);
-
-        JButton loginButton = new JButton("Login");
-        loginButton.setBounds(10,130,80,25);
-        loginButton.setActionCommand(COMMAND_LOGIN);
-        panel.add(loginButton);
-
-        ActionListener actionListener = new ActionListener() {
+        loginJButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                String command = actionEvent.getActionCommand();
-
-                if (COMMAND_LOGIN.equals(command)){
-                    System.out.println("ok按钮被点击");
-                    JOptionPane.showConfirmDialog(null,"标题【出错】","请输入数字", JOptionPane.ERROR_MESSAGE);
-                }else{
-                    System.out.println("Cannel按钮被返回");
-                }
+                WechatForm wechatForm = new WechatForm();
+                wechatForm.setJframeWechatVisible(true);
+                dispose();
             }
-        };
-        loginButton.addActionListener(actionListener);
+        });
 
-        JButton registerButton = new JButton("Register");
-        registerButton.setBounds(100,130,90,25);
-        panel.add(registerButton);
+        registerJButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                Register register = new Register();
+                register.setJFrameRegisterVisible(true);
+               // setVisible(true);
+            }
+        });
+
     }
-}
 
+    public void setLoginJFarmeVisible(Boolean visible){setVisible(visible);}
+
+}
