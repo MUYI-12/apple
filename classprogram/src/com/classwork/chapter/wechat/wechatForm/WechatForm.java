@@ -13,7 +13,7 @@ public class WechatForm extends JFrame {
 
     public WechatForm(){
         setTitle("Wechat form");
-        setSize(300,300);
+        setSize(300,190);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         PanelMain = new JPanel();
