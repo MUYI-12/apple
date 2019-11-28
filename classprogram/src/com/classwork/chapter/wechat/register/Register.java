@@ -1,7 +1,6 @@
 package com.classwork.chapter.wechat.register;
 
 import com.classwork.chapter.wechat.loginForm.LoginForm;
-import com.classwork.chapter.wechat.weformRegis.WeformRegis;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -67,8 +66,15 @@ public class Register extends JFrame {
         registerJButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                WeformRegis weformRegis = new WeformRegis();
-                weformRegis.setWeformRegisVisible(true);
+                RegisterUilts registerUilts = new RegisterUilts();
+                String username = userText.getText();
+                String userpassword = passwordText.getText();
+                int result = registerUilts.regisata(username,userpassword);
+                if(result == 0){
+                    //  WeformRegis weformRegis = new WeformRegis();
+                    //  weformRegis.setWeformRegisVisible(true);
+                }
+
             }
         });
 

@@ -13,6 +13,7 @@ import com.classwork.chapter.wechat.wechatForm.WechatForm;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class LoginForm extends JFrame {
 
@@ -32,7 +33,7 @@ public class LoginForm extends JFrame {
         LoginJPanel = new JPanel();
         LoginJPanel.setLayout(null);
 
-        loginJLabel = new JLabel("Login:");
+        loginJLabel = new JLabel("UserName:");
         loginJLabel.setBounds(10,10,80,25);
         LoginJPanel.add(loginJLabel);
 
@@ -51,6 +52,7 @@ public class LoginForm extends JFrame {
         loginJButton = new JButton("Login");
         loginJButton.setBounds(10,90,80,25);
         LoginJPanel.add(loginJButton);
+        loginJButton.addActionListener(new loginevent());
 
         registerJButton = new JButton("Register");
         registerJButton.setBounds(100,90,80,25);
@@ -58,14 +60,15 @@ public class LoginForm extends JFrame {
 
         add(LoginJPanel);
 
-        loginJButton.addActionListener(new ActionListener() {
+
+       /* loginJButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 WechatForm wechatForm = new WechatForm();
                 wechatForm.setJframeWechatVisible(true);
                 dispose();
             }
-        });
+        });*/
 
         registerJButton.addActionListener(new ActionListener() {
             @Override
@@ -75,7 +78,24 @@ public class LoginForm extends JFrame {
                // setVisible(true);
             }
         });
+    }
+    class loginevent implements ActionListener{
 
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+
+            LoginUits loginUits = new LoginUits();
+
+            String username = loginText.getText();
+            String userpassword = String.valueOf(passwordJText.getText());
+            int result = loginUits.Uitsate( username,userpassword);
+            if (result == 1){
+                WechatForm wechatForm = new WechatForm();
+                wechatForm.setJframeWechatVisible(true);
+                dispose();
+            }else {JOptionPane.showMessageDialog(null,"用户名或密码错误！","错误 ",0);}
+
+        }
     }
 
     public void setLoginJFarmeVisible(Boolean visible){setVisible(visible);}

@@ -10,6 +10,7 @@ import com.classwork.chapter.wechat.loginForm.LoginForm;
  */
 public class WechatManager {
     public static void main(String[] args){
+
         LoginForm loginForm = new LoginForm();
         loginForm.setLoginJFarmeVisible(true);
     }
